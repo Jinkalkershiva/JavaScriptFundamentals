@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e293b;
+            color: white;
+            padding: 15px 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .task-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            list-style: none;
+        }
+
+        .task-list li:last-child {
+            border-bottom: none;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-add {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .btn-remove {
+            background-color: #dc2626;
+            color: white;
+        }
+
+        input {
+            padding: 8px;
+            width: 70%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Student Task Manager</h1>
+</header>
+
+<div class="container">
+
+    <!-- Add Task Section -->
+    <div class="card">
+        <h2>Add New Task</h2>
+        <input type="text" id="taskInput" placeholder="Enter new task">
+        <button class="btn-add" id="addTaskBtn">Add Task</button>
+    </div>
+
+    <!-- Task List Section -->
+    <div class="card">
+        <h2>Task List</h2>
+        <ul class="task-list" id="taskList">
+            <li class="task-item">Complete Java Assignment</li>
+            <li class="task-item">Practice DSA Problems</li>
+            <li class="task-item">Learn DOM Manipulation</li>
+        </ul>
+        <button class="btn-remove" id="clearAllBtn">Clear All Tasks</button>
+    </div>
+
+</div>
+
+<script>
+    // Your DOM practice starts here 👇
+
+</script>
+
+</body>
+</html>

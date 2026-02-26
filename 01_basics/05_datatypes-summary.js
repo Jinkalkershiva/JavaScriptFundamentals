@@ -23,16 +23,16 @@ console.log(typeof bigNumber);   //BigInt
 
 const Avengers =["Thor", "IronMan", "Hulk", "Captain America"]  //Array
 
-let muObj ={
+let myObj ={
     name: "Shiva",
     age: 22,  
 }  //Object
 
 const myFunction = function(){
-    console,log("hellow World ");
+    console.log("hellow World ");
 }
 
-console.log(typeof muFunction);  //function
+console.log(typeof myFunction);  //function
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
