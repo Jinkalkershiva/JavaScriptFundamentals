@@ -99,7 +99,164 @@
 </div>
 
 <script>
-    // Your DOM practice starts here 👇
+    // Your DOM practice starts here 
+
+    // Get element by ID
+    const t1 = document.getElementById("taskInput");
+
+
+    // ===============================
+    // 1. VALUE OPERATIONS
+    // ===============================
+
+    // Set input value
+    t1.value = "Hello Shiva";
+
+    // Get input value
+    console.log("Current Value:", t1.value);
+
+    // Clear value
+    // t1.value = "";
+
+
+    // ===============================
+    // 2️.ATTRIBUTE OPERATIONS
+    // ===============================
+
+    // // Get attribute
+    // console.log("Placeholder:", t1.getAttribute("placeholder"));
+
+    // // Set / Update attribute
+    // t1.setAttribute("placeholder", "Enter your task here");
+
+    // // Add new attribute
+    // t1.setAttribute("maxlength", "20");
+
+    // Remove attribute
+    // t1.removeAttribute("maxlength");
+
+
+    // ===============================
+    // 3️.STYLE OPERATIONS
+    // ===============================
+
+    // // Change text color
+    // t1.style.color = "white";
+
+    // // Change background color
+    // t1.style.backgroundColor = "#222";
+
+    // // Add border
+    // t1.style.border = "2px solid green";
+
+    // // Add padding
+    // t1.style.padding = "8px";
+
+    // // Add border radius
+    // t1.style.borderRadius = "6px";
+
+
+    // ===============================
+    // 4️. CLASS OPERATIONS
+    // ===============================
+
+    // // Add class
+    // t1.classList.add("active-input");
+
+    // // Check class
+    // console.log("Has active-input?", t1.classList.contains("active-input"));
+
+    // // Toggle class
+    // t1.classList.toggle("highlight");
+
+    // Remove class
+    // t1.classList.remove("active-input");
+
+
+    // ===============================
+    // 5️. DISABLE / ENABLE
+    // ===============================
+
+    // Disable input
+    // t1.disabled = true;
+
+    // Enable input
+    // t1.disabled = false;
+
+
+    // ===============================
+    // 6️. FOCUS & BLUR
+    // ===============================
+
+    // Focus input
+    // t1.focus();
+
+    // Remove focus
+    // t1.blur();
+
+
+    // ===============================
+    // 7️.CHANGE INPUT TYPE
+    // ===============================
+
+    // Convert to password field
+    // t1.type = "password";
+
+    // Convert back to text
+    // t1.type = "text";
+
+
+    // ===============================
+    // 8️. EVENT LISTENER PRACTICE
+    // ===============================
+
+    // Detect typing
+    // t1.addEventListener("input", function () {
+    //     console.log("Typing:", t1.value);
+
+    //     // Dynamic border change based on length
+    //     if (t1.value.length > 5) {
+    //         t1.style.border = "2px solid green";
+    //     } else {
+    //         t1.style.border = "2px solid red";
+    //     }
+    // });
+
+
+    // // ===============================
+    // // 9️. CREATE & REMOVE ELEMENT
+    // // ===============================
+
+    // // Create new div
+    // const newDiv = document.createElement("div");
+
+    // // Add text
+    // newDiv.textContent = "This is a new div created using JS";
+
+    // // Style it
+    // newDiv.style.marginTop = "10px";
+    // newDiv.style.fontWeight = "bold";
+
+    // // Append to body
+    // document.body.appendChild(newDiv);
+
+    // // Remove element (uncomment to test)
+    // // newDiv.remove();
+
+
+    // // ===============================
+    // // 10. DOM INSPECTION
+    // // ===============================
+
+    // // Log full element object
+    // console.dir(t1);
+
+    // // Check parent element
+    // console.log("Parent:", t1.parentElement);
+
+    // // Check next sibling
+    // console.log("Next Sibling:", t1.nextElementSibling);
+
 
 </script>
 
