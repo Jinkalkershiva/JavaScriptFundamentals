@@ -3,21 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jinkalker Coder</title>
+    <title>Dom | practice </title>
 </head>
-<body>
+<body style=" background-color: #212121; color: #fff;">
     <div class="parent">
-        <div class="child">Monday</div>
-        <div class="child">Tuesday</div>
-        <div class="child">Wednesday</div>
-        <div class="child">Thursday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
     </div>
-    <h1>Hi shiva jinkalkerrr</h1>
+    
 </body>
 <script>
-   const parent = document.querySelector(`.parent`)
-   console.log(parent); 
+
+    //=> Parent to child move
+
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+
+    console.log(parent.children);
+    //HTMLCollection(4) [div.day, div.day, div.day, div.day]
+
+    console.log(parent.children[1].innerHTML);
+    //Tuesday
+
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+    }
+    // Monday
+    // Tuesday
+    // Wednesday
+    // Thursday
+
+    parent.children[1].style.color= "orange"
+    // Tuesday color is changed in orange
+
+    console.log(parent.firstElementChild);
+    //  <div class="day"> Monday</div>
+    console.log(parent.lastElementChild);
+    //  <div class="day"> Thursday</div>
+
+
+    // child to parent move 
+    const dayOne =document.querySelector('.day')
+
+    console.log(dayOne);
+    // <div class="day"> Monday</div>
+
+    console.log(dayOne.parentElement);
+    // <div class="parent">
+    //     <div class="day">Monday</div>
+    //     <div class="day" style="color: orange;">Tuesday</div>
+    //     <div class="day">Wednesday</div>
+    //     <div class="day">Thursday</div>
+    // </div>
+
+    console.log(dayOne.nextElementSibling);
+    // <div class="day" style="color: orange;">Tuesday</div>
+
+    console.log("NODES: ",parent.childNodes);
+    //NODES:  NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+
 
 </script>
-
 </html>
