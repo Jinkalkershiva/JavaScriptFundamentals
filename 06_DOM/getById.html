@@ -1,264 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Student Task Manager</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+      }
 
-        header {
-            background-color: #1e293b;
-            color: white;
-            padding: 15px 30px;
-        }
+      header {
+        background-color: #1e293b;
+        color: white;
+        padding: 15px 30px;
+      }
 
-        header h1 {
-            margin: 0;
-        }
+      header h1 {
+        margin: 0;
+      }
 
-        .container {
-            width: 80%;
-            margin: 30px auto;
-        }
+      .container {
+        width: 80%;
+        margin: 30px auto;
+      }
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
 
-        .task-list li {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            list-style: none;
-        }
+      .task-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        list-style: none;
+      }
 
-        .task-list li:last-child {
-            border-bottom: none;
-        }
+      .task-list li:last-child {
+        border-bottom: none;
+      }
 
-        button {
-            padding: 8px 12px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+      button {
+        padding: 8px 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
 
-        .btn-add {
-            background-color: #2563eb;
-            color: white;
-        }
+      .btn-add {
+        background-color: #2563eb;
+        color: white;
+      }
 
-        .btn-remove {
-            background-color: #dc2626;
-            color: white;
-        }
+      .btn-remove {
+        background-color: #dc2626;
+        color: white;
+      }
 
-        input {
-            padding: 8px;
-            width: 70%;
-            margin-right: 10px;
-        }
+      input {
+        padding: 8px;
+        width: 70%;
+        margin-right: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <h1>Student Task Manager</h1>
+    </header>
 
-<header>
-    <h1>Student Task Manager</h1>
-</header>
-
-<div class="container">
-
-    <!-- Add Task Section -->
-    <div class="card">
+    <div class="container">
+      <!-- Add Task Section -->
+      <div class="card">
         <h2>Add New Task</h2>
-        <input type="text" id="taskInput" placeholder="Enter new task">
+        <input type="text" id="taskInput" placeholder="Enter new task" />
         <button class="btn-add" id="addTaskBtn">Add Task</button>
-    </div>
+      </div>
 
-    <!-- Task List Section -->
-    <div class="card">
+      <!-- Task List Section -->
+      <div class="card">
         <h2>Task List</h2>
         <ul class="task-list" id="taskList">
-            <li class="task-item">Complete Java Assignment</li>
-            <li class="task-item">Practice DSA Problems</li>
-            <li class="task-item">Learn DOM Manipulation</li>
+          <li class="task-item">Complete Java Assignment</li>
+          <li class="task-item">Practice DSA Problems</li>
+          <li class="task-item">Learn DOM Manipulation</li>
         </ul>
         <button class="btn-remove" id="clearAllBtn">Clear All Tasks</button>
+      </div>
     </div>
 
-</div>
+    <script>
+      // Your DOM practice starts here
 
-<script>
-    // Your DOM practice starts here 
+      // Get element by ID
+      const t1 = document.getElementById("taskInput");
 
-    // Get element by ID
-    const t1 = document.getElementById("taskInput");
+      // ===============================
+      // 1. VALUE OPERATIONS
+      // ===============================
 
+      // Set input value
+      t1.value = "Hello Shiva";
 
-    // ===============================
-    // 1. VALUE OPERATIONS
-    // ===============================
+      // Get input value
+      console.log("Current Value:", t1.value);
 
-    // Set input value
-    t1.value = "Hello Shiva";
+      // Clear value
+      // t1.value = "";
 
-    // Get input value
-    console.log("Current Value:", t1.value);
+      // ===============================
+      // 2️.ATTRIBUTE OPERATIONS
+      // ===============================
 
-    // Clear value
-    // t1.value = "";
+      // // Get attribute
+      console.log("Placeholder:", t1.getAttribute("placeholder"));
 
+      // // Set / Update attribute
+      t1.setAttribute("placeholder", "Enter your task here");
 
-    // ===============================
-    // 2️.ATTRIBUTE OPERATIONS
-    // ===============================
+      // // Add new attribute
+      t1.setAttribute("maxlength", "20");
 
-    // // Get attribute
-    console.log("Placeholder:", t1.getAttribute("placeholder"));
+      // Remove attribute
+      t1.removeAttribute("maxlength");
 
-    // // Set / Update attribute
-    t1.setAttribute("placeholder", "Enter your task here");
+      // ===============================
+      // 3️.STYLE OPERATIONS
+      // ===============================
 
-    // // Add new attribute
-    t1.setAttribute("maxlength", "20");
+      // // Change text color
+      t1.style.color = "white";
 
-    // Remove attribute
-    t1.removeAttribute("maxlength");
+      // // Change background color
+      t1.style.backgroundColor = "#222";
 
+      // // Add border
+      t1.style.border = "2px solid green";
 
-    // ===============================
-    // 3️.STYLE OPERATIONS
-    // ===============================
+      // // Add padding
+      t1.style.padding = "8px";
 
-    // // Change text color
-    t1.style.color = "white";
+      // // Add border radius
+      t1.style.borderRadius = "6px";
 
-    // // Change background color
-    t1.style.backgroundColor = "#222";
+      // ===============================
+      // 4️. CLASS OPERATIONS
+      // ===============================
 
-    // // Add border
-    t1.style.border = "2px solid green";
+      // // Add class
+      t1.classList.add("active-input");
 
-    // // Add padding
-    t1.style.padding = "8px";
+      // // Check class
+      console.log("Has active-input?", t1.classList.contains("active-input"));
 
-    // // Add border radius
-    t1.style.borderRadius = "6px";
+      // // Toggle class
+      t1.classList.toggle("highlight");
 
+      // Remove class
+      t1.classList.remove("active-input");
 
-    // ===============================
-    // 4️. CLASS OPERATIONS
-    // ===============================
+      // ===============================
+      // 5️. DISABLE / ENABLE
+      // ===============================
 
-    // // Add class
-    t1.classList.add("active-input");
+      // Disable input
+      // t1.disabled = true;
 
-    // // Check class
-    console.log("Has active-input?", t1.classList.contains("active-input"));
+      // Enable input
+      t1.disabled = false;
 
-    // // Toggle class
-    t1.classList.toggle("highlight");
+      // ===============================
+      // 6️. FOCUS & BLUR
+      // ===============================
 
-    // Remove class
-    t1.classList.remove("active-input");
+      // Focus input
+      t1.focus();
 
+      // Remove focus
+      t1.blur();
 
-    // ===============================
-    // 5️. DISABLE / ENABLE
-    // ===============================
+      // ===============================
+      // 7️.CHANGE INPUT TYPE
+      // ===============================
 
-    // Disable input
-    // t1.disabled = true;
+      // Convert to password field
+      t1.type = "password";
 
-    // Enable input
-    t1.disabled = false;
+      // Convert back to text
+      t1.type = "text";
 
+      // ===============================
+      // 8️. EVENT LISTENER PRACTICE
+      // ===============================
 
-    // ===============================
-    // 6️. FOCUS & BLUR
-    // ===============================
-
-    // Focus input
-    t1.focus();
-
-    // Remove focus
-    t1.blur();
-
-
-    // ===============================
-    // 7️.CHANGE INPUT TYPE
-    // ===============================
-
-    // Convert to password field
-    t1.type = "password";
-
-    // Convert back to text
-    t1.type = "text";
-
-
-    // ===============================
-    // 8️. EVENT LISTENER PRACTICE
-    // ===============================
-
-    // Detect typing
-    t1.addEventListener("input", function () {
+      // Detect typing
+      t1.addEventListener("input", function () {
         console.log("Typing:", t1.value);
 
         // Dynamic border change based on length
         if (t1.value.length > 5) {
-            t1.style.border = "2px solid green";
+          t1.style.border = "2px solid green";
         } else {
-            t1.style.border = "2px solid red";
+          t1.style.border = "2px solid red";
         }
-    });
+      });
 
+      // // ===============================
+      // // 9️. CREATE & REMOVE ELEMENT
+      // // ===============================
 
-    // // ===============================
-    // // 9️. CREATE & REMOVE ELEMENT
-    // // ===============================
+      // // Create new div
+      const newDiv = document.createElement("div");
 
-    // // Create new div
-    const newDiv = document.createElement("div");
+      // // Add text
+      newDiv.textContent = "This is a new div created using JS";
 
-    // // Add text
-    newDiv.textContent = "This is a new div created using JS";
+      // // Style it
+      newDiv.style.marginTop = "10px";
+      newDiv.style.fontWeight = "bold";
 
-    // // Style it
-    newDiv.style.marginTop = "10px";
-    newDiv.style.fontWeight = "bold";
+      // // Append to body
+      document.body.appendChild(newDiv);
 
-    // // Append to body
-    document.body.appendChild(newDiv);
+      // // Remove element (uncomment to test)
+      newDiv.remove();
 
-    // // Remove element (uncomment to test)
-    newDiv.remove();
+      // // ===============================
+      // // 10. DOM INSPECTION
+      // // ===============================
 
+      // // Log full element object
+      console.dir(t1);
 
-    // // ===============================
-    // // 10. DOM INSPECTION
-    // // ===============================
+      // // Check parent element
+      console.log("Parent:", t1.parentElement);
 
-    // // Log full element object
-    console.dir(t1);
-
-    // // Check parent element
-    console.log("Parent:", t1.parentElement);
-
-    // // Check next sibling
-    console.log("Next Sibling:", t1.nextElementSibling);
-
-
-</script>
-
-</body>
+      // // Check next sibling
+      console.log("Next Sibling:", t1.nextElementSibling);
+    </script>
+  </body>
 </html>
