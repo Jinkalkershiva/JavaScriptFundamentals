@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Notes</title>
   </head>
-  <body style="background-color: #212121; color: #fff">
+  <body style="background-color: #190e0e; color: #fff">
     <ul class="language">
       <li>javascript</li>
     </ul>
@@ -13,18 +13,37 @@
     <script>
       function addLanguage(langName) {
         const li = document.createElement("li");
-        li.innerHtml = `${langName}`;
-        document.querySelector(".languale").appendChild(li);
+        //bad apprach
+        li.innerHtml = `${langName}`
+        document.querySelector(".language").appendChild(li);
       }
 
       addLanguage("python");
       addLanguage("typescript");
 
       function addOptiLanguage(langName) {
+        //good approach to create
         const li = document.createElement("li");
         li.appendChild(documnet.createTextNode(langName));
+        document.querySelector(".language").appendChild(li);
       }
       addOptiLanguage("golang");
+
+      //edit
+      const secondLang = document.querySelector("li:nth-child(2)");
+      console.log(secondLang);
+      //secondLang.innerHTML ="Mojo"
+      const newli = document.createElement("li")
+      newli.textContent = "Mojo"
+      secondLang.replaceWith(newli)
+
+      //edit
+      const firstLng = document.querySelector('li:first-child')
+      firstLang.outerHTML = '<li>TypeScript</li>'
+
+      //remove
+      const lastLang = document.querySelector("li:last-child")
+      lastLang-remove()
     </script>
   </body>
 </html>
