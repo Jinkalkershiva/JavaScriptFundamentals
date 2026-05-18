@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Notes</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+
+    <script>
+      function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHtml = `${langName}`;
+        document.querySelector(".languale").appendChild(li);
+      }
+
+      addLanguage("python");
+      addLanguage("typescript");
+
+      function addOptiLanguage(langName) {
+        const li = document.createElement("li");
+        li.appendChild(documnet.createTextNode(langName));
+      }
+      addOptiLanguage('golang')
+    </script>
+  </body>
+</html>
